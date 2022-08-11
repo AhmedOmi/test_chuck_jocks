@@ -8,7 +8,6 @@ function SearchComponent() {
             <input type="search" placeholder="How can we make you laugh today?" className="search-input" id="search-box" />
             <button type="submit"><AiOutlineSearch /></button>
         </form>
-
     )
 }
 

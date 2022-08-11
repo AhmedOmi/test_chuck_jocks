@@ -7,7 +7,7 @@ function ListOfArticles() {
     const [categories, setCategories] = useState([])
     const [showCategories, setShowCategories] = useState(7)
     const [category, setCategory] = useState("")
-    const [jokes, setJokes] = useState([])
+    const [joke, setJoke] = useState<any>()
 
     const showMoreCategories = () => {
         setShowCategories((prevValue => categories.length))
@@ -17,7 +17,24 @@ function ListOfArticles() {
     }
     const getCategoriesJokes = (props: any) => {
         setCategory(props)
-        axios.get(`https://api.chucknorris.io/jokes/random?category=${props}`).then(resp => setJokes(resp.data))
+        axios.get(`https://api.chucknorris.io/jokes/random?category=${props}`).then(resp => setJoke(resp.data))
+    }
+    const getDetailsJoke = () => {
+        console.log
+    }
+    const multipleJokes = () => {
+        const rows = [];
+        for (let i = 0; i < 6; i++) {
+            rows.push(
+                <div className="column">
+                    <div className="card">
+                        <h3 className="title">No Title</h3>
+                        <p className="paragraph">{joke && joke.value}</p>
+                        <a href="#" >SEE STATS</a>
+                    </div>
+                </div>)
+        }
+        return rows;
     }
     useEffect(() => {
         getCategories()
@@ -28,12 +45,13 @@ function ListOfArticles() {
                 {categories.slice(0, showCategories).map((item: any) => <button className="Button-categories" type="button" onClick={() => { getCategoriesJokes(item) }}>{item}</button>)}
                 <button className="Button-categories" type="button" onClick={showMoreCategories}> VIEW ALL</button>
             </div>
+            <div className="category_title">
+                <p>{category}</p>
+            </div>
             <div className="jokes_List">
-                <div className="category_title">
-                    <p>{category}</p>
-                </div>
-                <div>
-                    
+                <div className="row">
+                    {multipleJokes()}
+                    <button type="button">View More</button>
                 </div>
             </div>
         </div>

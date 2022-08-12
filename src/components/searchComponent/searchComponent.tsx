@@ -1,13 +1,14 @@
 import React from "react";
 import { AiOutlineSearch } from 'react-icons/ai';
-
+import search from '../../assets/img/search-copy@2x.png';
 import './searchStyle.css';
 function SearchComponent() {
     return (
-        <form className="searchform group">
-            <input type="search" placeholder="How can we make you laugh today?" className="search-input" id="search-box" />
-            <button type="submit"><AiOutlineSearch /></button>
-        </form>
+        <div className="wrapper">
+            <div className="search-input">
+                <input type="search" placeholder="How can we make you laugh today?" id="search-box" />
+            </div>
+        </div>
     )
 }
 

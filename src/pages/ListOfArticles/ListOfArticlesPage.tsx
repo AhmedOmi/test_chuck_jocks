@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { getEnabledCategories } from "trace_events";
+import icon from "../../assets/img/green-light-copy-2.png";
+import arrow from "../../assets/img/path@2x.png";
 import './ListOfArticlesStyle.css';
 
 function ListOfArticles() {
@@ -30,9 +32,9 @@ function ListOfArticles() {
                 rows.push(
                     <div className="column">
                         <div className="card">
-                            <h3 className="title">No Title</h3>
+                            <h3 className="title"><img src={icon} alt="icon"/>No Title</h3>
                             <p className="paragraphe">{joke.value}</p>
-                            <a href="#" >SEE STATS</a>
+                            <a href="#" ><h5>SEE STATS</h5><img src={arrow} alt="arrow"/></a>
                         </div>
                     </div>)
             }
@@ -55,7 +57,7 @@ function ListOfArticles() {
             <div className="jokes_List">
                 <div className="row">
                     {multipleJokes()}
-                    <button type="button">View More</button>
+                    <button type="button" className="view_button">View More</button>
                 </div>
             </div>
         </div>

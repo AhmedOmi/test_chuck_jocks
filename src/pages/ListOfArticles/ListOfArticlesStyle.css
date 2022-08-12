@@ -92,3 +92,18 @@
     background-color: #888888;
     color: white;
 }
+
+.title img{
+    margin-right: 10px;
+}
+
+.card a{
+    display: flex;
+    align-items: center;
+}
+
+.card a h5{
+    width: 100px;
+    font-size: 16px;
+    color: #888888;
+}

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import icon from "../../assets/img/green-light-copy-2.png";
 import './searchStyle.css';
 function SearchComponent() {
     const rows = [];
@@ -19,7 +20,7 @@ function SearchComponent() {
         if (searchData) {
             return <ul className="search_items">
                     {searchData && searchData.slice(0, 5).map((search: any) => {
-                        return <li className="search_item">{search.id}</li>
+                        return <li className="search_item"><img src={icon} alt="icon" />{search.id}</li>
                     })}
                 </ul>
         }

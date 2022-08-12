@@ -3,29 +3,28 @@ import "./headerStyle.css";
 import { FaUserAlt } from 'react-icons/fa';
 import { TiArrowSortedDown } from 'react-icons/ti';
 import SearchComponent from "../searchComponent/searchComponent";
+import shape from '../../assets/img/shape.png';
+import path from '../../assets/img/path_2@2x.png'
 function HeaderComponent() {
     return (
         <div className="header">
             <div className="header-navbar">
-                <ul>
-                    <li><a href="#">SO FUNKTIONIERT'S</a></li>
-                    <li><a href="#">SONDERANGEBOTE</a></li>
-                    <li className="dropdown">
-                        <a href="#" className="dropbtn">
-                            <span className="userIcon">
-                                <FaUserAlt />
-                            </span>
-                            MEIN BEREICH
-                            <span className="arrowIcon">
-                                <TiArrowSortedDown />
-                            </span>
-                        </a>
-                        <div className="dropdown-content">
-                            <a href="#">My published jokes</a>
-                            <a href="#">My saved jokes</a>
-                            <a href="#">Account Information</a>
-                            <a href="#">Publish new joke</a>
-                        </div>
+                <ul className="navbar">
+                    <li><a className="nav-button" href="#">SO FUNKTIONIERT'S</a></li>
+                    <li><a  className="nav-button" href="#">SONDERANGEBOTE</a></li>
+                    <li>
+                        <nav>
+                            <label htmlFor="btn" className="button"><img className="icon" src={shape}/><a className="nav-button">MEIN BEREICH</a>
+                                <img className="arrow" src={path}/>
+                            </label>
+                            <input type="checkbox" className="checkbutton" id="btn" />
+                            <ul className="menu">
+                                <li><a href="#">My published jokes</a></li>
+                                <li><a href="#">My saved jokes</a></li>
+                                <li><a href="#">Account Information</a></li>
+                                <li><a href="#">Publish new joke</a></li>
+                            </ul>
+                        </nav>
                     </li>
                 </ul>
             </div>

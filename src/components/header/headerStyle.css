@@ -11,12 +11,14 @@
     height: 51px;
     justify-content: flex-end;
     align-items: center;
+    font-family: 'Medium';
 }
 
 .navbar>li{
     color: white;
     padding: 15px;
     margin-right: 80px;
+    
 }
 .nav-button{
   text-decoration: none;
@@ -42,6 +44,7 @@
 }
 .search{
     text-align: center;
+    font-family: 'Medium';
 } */
 
 nav{

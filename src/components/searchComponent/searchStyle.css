@@ -18,6 +18,7 @@ width: 450px ;
 }
 
 .search-input input{
+    font-family: 'Medium';
     background: transparent;
     border:1px solid white;
     color: gainsboro;

@@ -181,22 +181,33 @@ nav ul li span{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .header-search-bg>.search>h1{
     color: #d0ba93;
+    position: relative;
+    left: 30px;
 }
 .header-search-bg>.search>p{
-    color:white
+    color:white;
+    position: relative;
+    left: 30px;
 }
 .search{
-    text-align: center;
     font-family: 'Medium';
-} */
+    width:100%;
+    position: relative;
+    right: 30px;
+    
+} 
+
+.wrapper{
+  width: 100% !important;
+  position: relative;
+  left: 30px;
+}
 
 nav{
-  position: relative;
-  right: 20px;
-  width: 200px;
   line-height: 40px;
   padding: 5px;
 }
@@ -214,6 +225,7 @@ nav .menu:before{
   transform: rotate(45deg);
   z-index: 0 ;
 }
+
 nav label{
   color: white;
   display: block;
@@ -235,10 +247,11 @@ nav ul{
   background-color: white;
   list-style: none;
   right: 80px;
-  top:190px;
+  top:220px;
   width: 220px;
   border-radius: 5px;
   display: none;
+  z-index: 1;
 }
 .checkbutton{
   display: none;

@@ -48,9 +48,10 @@ function ListOfArticles() {
                 {categories.slice(0, showCategories).map((item: any) => <button className="Button-categories" type="button" onClick={() => { getCategoriesJokes(item) }}>{item}</button>)}
                 <button className="Button-categories view_button" type="button" onClick={showMoreCategories}> VIEW ALL</button>
             </div>
+            {category && 
             <div className="category_title">
                 <p>{category}</p>
-            </div>
+            </div>}
             <div className="jokes_List">
                 <div className="row">
                     {multipleJokes()}

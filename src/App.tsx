@@ -3,7 +3,6 @@ import HeaderComponent from './components/header/headerComponents';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Routes
 } from 'react-router-dom';
 import './App.css';
@@ -27,6 +26,7 @@ import "./assets/fonts/Montserrat-SemiBoldItalic.ttf";
 import "./assets/fonts/Montserrat-Thin.ttf";
 import "./assets/fonts/Montserrat-ThinItalic.ttf";
 import footer_img from "./assets/img/bitmap_2@2x.png";
+import ArticleDetailsPage from './pages/ArticleDetails/ArticleDetailsPage';
 
 function App() {
   return (
@@ -35,7 +35,12 @@ function App() {
         <HeaderComponent />
       </header>
       <main>
-        <ListOfArticles />
+        <Router>
+          <Routes>
+            <Route path="/" element={<ListOfArticles/>}/>
+            <Route path="/joke" element={<ArticleDetailsPage/>}/>
+          </Routes>
+        </Router>
       </main>
       <footer>
         <div>
@@ -44,7 +49,7 @@ function App() {
           <a href="#">SUBMIT JOKE</a>
         </div>
       </footer>
-    </div>
+    </div >
   );
 }
 

@@ -1,6 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import HeaderComponent from './components/header/headerComponents';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes
+} from 'react-router-dom';
 import './App.css';
 import ListOfArticles from './pages/ListOfArticles/ListOfArticlesPage';
 import "./assets/fonts/Montserrat-Thin.ttf";
@@ -21,6 +26,7 @@ import "./assets/fonts/Montserrat-SemiBold.ttf";
 import "./assets/fonts/Montserrat-SemiBoldItalic.ttf";
 import "./assets/fonts/Montserrat-Thin.ttf";
 import "./assets/fonts/Montserrat-ThinItalic.ttf";
+import footer_img from "./assets/img/bitmap_2@2x.png";
 
 function App() {
   return (
@@ -29,9 +35,15 @@ function App() {
         <HeaderComponent />
       </header>
       <main>
-        < ListOfArticles />
+        <ListOfArticles />
       </main>
-      <footer></footer>
+      <footer>
+        <div>
+          <p> GOT JOKES? GET PAID</p>
+          <p>FOR SUBMITTING!</p>
+          <a href="#">SUBMIT JOKE</a>
+        </div>
+      </footer>
     </div>
   );
 }

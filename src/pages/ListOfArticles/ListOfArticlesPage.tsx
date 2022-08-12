@@ -25,14 +25,17 @@ function ListOfArticles() {
     const multipleJokes = () => {
         const rows = [];
         for (let i = 0; i < 6; i++) {
-            rows.push(
-                <div className="column">
-                    <div className="card">
-                        <h3 className="title">No Title</h3>
-                        <p className="paragraph">{joke && joke.value}</p>
-                        <a href="#" >SEE STATS</a>
-                    </div>
-                </div>)
+            {
+                joke && 
+                rows.push(
+                    <div className="column">
+                        <div className="card">
+                            <h3 className="title">No Title</h3>
+                            <p className="paragraphe">{joke.value}</p>
+                            <a href="#" >SEE STATS</a>
+                        </div>
+                    </div>)
+            }
         }
         return rows;
     }
@@ -43,7 +46,7 @@ function ListOfArticles() {
         <div>
             <div className="categories">
                 {categories.slice(0, showCategories).map((item: any) => <button className="Button-categories" type="button" onClick={() => { getCategoriesJokes(item) }}>{item}</button>)}
-                <button className="Button-categories" type="button" onClick={showMoreCategories}> VIEW ALL</button>
+                <button className="Button-categories view_button" type="button" onClick={showMoreCategories}> VIEW ALL</button>
             </div>
             <div className="category_title">
                 <p>{category}</p>
